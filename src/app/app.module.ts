@@ -6,6 +6,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import {AgmCoreModule} from "angular2-google-maps/core/core-module";
+import {BrowserModule} from "@angular/platform-browser";
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {AgmCoreModule} from "angular2-google-maps/core/core-module";
     TabsPage
   ],
   imports: [
+    BrowserModule,
     IonicModule.forRoot(MyApp),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBJ2KN_uctN7_7YzB_1_DBhNVXgEb74D40'
@@ -30,6 +32,8 @@ import {AgmCoreModule} from "angular2-google-maps/core/core-module";
     HomePage,
     TabsPage
   ],
-  providers: []
+  providers: [
+    
+  ]
 })
 export class AppModule {}
