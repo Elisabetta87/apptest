@@ -12,23 +12,17 @@
   <ion-list>
     <ion-item>
       <button ion-button color="mygreen" padding full (click)="getGeolocation()">
-        My location
+        Testing google api
       </button>
     </ion-item>
     <ion-item>
-      <div *ngIf="location">
-        <h3>Latitude: {{location.lat}}</h3>
-        <h3>Longitude: {{location.lng}}</h3>
-      </div>
+      <ion-icon *ngIf="address" color="mygreen" name="navigate"></ion-icon>
+        {{address}}
     </ion-item>
-   <!-- <ion-item>
-      <button (click)="getMapresults()"></button>
-    </ion-item>-->
   </ion-list>
 
- <!-- <div id="mapid"></div>-->
 
-  <sebm-google-map *ngIf="location" [latitude]="location.lat" [longitude]="location.lng">
+  <sebm-google-map padding *ngIf="location" [latitude]="location.lat" [longitude]="location.lng">
     <sebm-google-map-marker [latitude]="location.lat" [longitude]="location.lng"></sebm-google-map-marker>
   </sebm-google-map>
 
