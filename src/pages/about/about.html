@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item padding-bottom>
+  <ion-item padding-bottom (click)="callOffice($event)">
     <ion-icon padding-right color="mygreen" name="call"></ion-icon>
     020 3695 9275
   </ion-item>
@@ -15,7 +15,7 @@
     <ion-icon padding-right color="mygreen" name="home"></ion-icon>
     41 Corsham Street, London N1 6DR
   </ion-item>
-  <ion-item padding-bottom>
+  <ion-item padding-bottom  (click)="callOffice($event)">
     <ion-icon padding-right color="mygreen" name="phone-portrait"></ion-icon>
     +44 20 3695 9275
   </ion-item>

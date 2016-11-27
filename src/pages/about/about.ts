@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
-
+import {CallNumber} from 'ionic-native';
+//CallNumber
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
@@ -19,6 +19,15 @@ export class AboutPage {
   }
 
 
+  callOffice(ev) {
+     CallNumber.callNumber(ev.target.innerText, true)
+     .then(() => console.log('call!'))
+     .catch(() => console.log('error'));
+    console.log(ev.target.innerText);
+  }
 
 
 }
+
+
+
